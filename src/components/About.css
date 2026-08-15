@@ -1,0 +1,52 @@
+.about {
+  background: var(--bg-primary);
+  border-top: 1px solid var(--border-color);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.75;
+  max-width: 42rem;
+}
+
+.skills h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.skill-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.skill-list li {
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 1rem;
+  color: var(--text-secondary);
+  transition: color var(--transition), padding-left var(--transition);
+}
+
+.skill-list li:hover {
+  color: var(--text-primary);
+  padding-left: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}

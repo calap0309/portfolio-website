@@ -1,0 +1,80 @@
+.projects {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+}
+
+.project-list {
+  list-style: none;
+  border-top: 1px solid var(--border-color);
+}
+
+.project-row {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr auto;
+  gap: 1.5rem;
+  align-items: start;
+  padding: 1.75rem 0.25rem;
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color var(--transition), padding var(--transition);
+}
+
+.project-row:hover {
+  background: color-mix(in srgb, var(--accent-color) 12%, transparent);
+  padding-left: 0.85rem;
+  padding-right: 0.85rem;
+}
+
+.project-year {
+  font-size: 0.9rem;
+  color: var(--text-tertiary);
+  padding-top: 0.35rem;
+}
+
+.project-main h3 {
+  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+  margin-bottom: 0.5rem;
+}
+
+.project-main p {
+  margin-bottom: 0.85rem;
+  max-width: 40rem;
+  font-size: 1.02rem;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+
+.project-tags span {
+  font-size: 0.85rem;
+  color: var(--text-tertiary);
+  letter-spacing: 0.02em;
+}
+
+.project-arrow {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity var(--transition), transform var(--transition);
+  padding-top: 0.25rem;
+}
+
+.project-row:hover .project-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 640px) {
+  .project-row {
+    grid-template-columns: 1fr auto;
+    gap: 0.75rem 1rem;
+  }
+
+  .project-year {
+    grid-column: 1 / -1;
+    padding-top: 0;
+  }
+}
